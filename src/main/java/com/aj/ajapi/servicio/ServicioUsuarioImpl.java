@@ -5,6 +5,7 @@ import com.aj.ajapi.repositorio.RepositorioUsuario;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -43,5 +44,9 @@ public class ServicioUsuarioImpl implements ServicioUsuario{
         {
             return false;
         }
+    }
+    @Override
+    public List<Usuario> obtenerTodosUsuarios(){
+       return repositorioUsuario.findAll();
     }
 }
