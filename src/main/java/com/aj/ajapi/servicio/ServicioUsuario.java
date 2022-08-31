@@ -7,7 +7,7 @@ import java.util.Optional;
 public interface ServicioUsuario {
     Usuario guardarUsuario(Usuario usuario);
 
-    Usuario obtenerUsuario(Long idUsuario);
+    Optional<Usuario> obtenerUsuario(Long idUsuario);
 
     Usuario usuarioModificar(Long id, Usuario usuarioModificar);
 

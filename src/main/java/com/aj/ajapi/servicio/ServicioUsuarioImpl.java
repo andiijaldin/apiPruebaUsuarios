@@ -18,8 +18,8 @@ public class ServicioUsuarioImpl implements ServicioUsuario{
     }
 
     @Override
-    public Usuario obtenerUsuario(Long idUsuario) {
-        return repositorioUsuario.findById(idUsuario).orElseThrow(() -> {throw new RuntimeException();});
+    public Optional<Usuario> obtenerUsuario(Long idUsuario) {
+        return repositorioUsuario.findById(idUsuario);
     }
 
     @Override
