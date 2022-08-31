@@ -25,7 +25,10 @@ public class ServicioUsuarioImpl implements ServicioUsuario{
     @Override
     public Usuario usuarioModificar(Long id, Usuario usuarioModificar) {
       Usuario usuarioBuscado=repositorioUsuario.findById(id).get();
-      usuarioBuscado.setDireccion(usuarioModificar.getDireccion());
+        usuarioBuscado.setNombre(usuarioModificar.getNombre());
+        usuarioBuscado.setApellido(usuarioModificar.getApellido());
+        usuarioBuscado.setTelefono(usuarioModificar.getTelefono());
+        usuarioBuscado.setDireccion(usuarioModificar.getDireccion());
       return repositorioUsuario.save(usuarioBuscado);
     }
 
