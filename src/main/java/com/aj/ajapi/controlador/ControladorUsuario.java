@@ -43,4 +43,9 @@ private final ServicioUsuario servicioUsuario;
         }
 
     }
+
+    @GetMapping("/prueba/{id}")
+    public String probarUsuario(@PathVariable("id") Long idUsuario){
+        return idUsuario.toString();
+    }
 }
